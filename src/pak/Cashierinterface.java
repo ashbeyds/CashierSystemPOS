@@ -91,7 +91,7 @@ public class Cashierinterface extends JFrame {
 		panel.add(panel_2);
 		
 		txtId = new JTextField();
-		txtId.setText("ID");
+		txtId.setText("qwnhqwhuguqgh");
 		txtId.setBounds(0, 83, 86, 20);
 		panel.add(txtId);
 		txtId.setColumns(10);
