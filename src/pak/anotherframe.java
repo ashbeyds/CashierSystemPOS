@@ -54,5 +54,6 @@ public class anotherframe extends JFrame {
 		panel_2.setBackground(Color.GRAY);
 		panel_2.setBounds(53, 154, 77, 64);
 		contentPane.add(panel_2);
+		System.out.print("tieiteizcxcxzcxzcxet");
 	}
 }
