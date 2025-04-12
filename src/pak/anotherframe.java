@@ -49,5 +49,10 @@ public class anotherframe extends JFrame {
 		panel_1.setBackground(Color.BLACK);
 		panel_1.setBounds(228, 107, 95, 111);
 		contentPane.add(panel_1);
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setBackground(Color.GRAY);
+		panel_2.setBounds(53, 154, 77, 64);
+		contentPane.add(panel_2);
 	}
 }
