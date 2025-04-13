@@ -8,7 +8,7 @@ public class ConnectiontoDATABASE {
 		Connection con = null;
 		try {
 			Class.forName("org.sqlite.JDBC");
-			con = DriverManager.getConnection("jdbc:sqlite:databaselogin.db");
+			con = DriverManager.getConnection("jdbc:sqlite:databaselogin.db"); // Copy Qualified name or just copy file location
 			System.out.println("Connected");
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
