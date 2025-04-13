@@ -71,11 +71,8 @@ public class Cashierinterface extends JFrame {
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
-		JMenu NewMenuOther = new JMenu("Other");
-		menuBar.add(NewMenuOther);
-		
 		JMenuItem MenuItemAddProd = new JMenuItem("Add Product");
-		NewMenuOther.add(MenuItemAddProd);
+		menuBar.add(MenuItemAddProd);
 		
 		//opens adding of items/ deleting
 		
@@ -83,23 +80,20 @@ public class Cashierinterface extends JFrame {
 		    AddProductFrame addFrame = new AddProductFrame();
 		    addFrame.setVisible(true);
 		});
-
 		
-		JMenuItem MenuItemStoreIncome = new JMenuItem("Store Income");
-		NewMenuOther.add(MenuItemStoreIncome);
-		
-		//opens store income.
-		
-		MenuItemStoreIncome.addActionListener(e -> {
-		    StoreIncomeFrame incomeFrame = new StoreIncomeFrame();
-		    incomeFrame.setVisible(true);
-		});
+				
+				JMenuItem MenuItemStoreIncome = new JMenuItem("Store Income");
+				menuBar.add(MenuItemStoreIncome);
+				
+				//opens store income.
+				
+				MenuItemStoreIncome.addActionListener(e -> {
+				    StoreIncomeFrame incomeFrame = new StoreIncomeFrame();
+				    incomeFrame.setVisible(true);
+				});
 		
 		JMenuItem MenuItemStockMonitor = new JMenuItem("Stock Monitoring");
-		NewMenuOther.add(MenuItemStockMonitor);
-		contentPane = new JPanel();
-		contentPane.setBackground(new Color(139, 139, 139));
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		menuBar.add(MenuItemStockMonitor);
 		
 		//opens stock monitoring.
 		
@@ -107,6 +101,9 @@ public class Cashierinterface extends JFrame {
 		    StockMonitoringFrame stockFrame = new StockMonitoringFrame();
 		    stockFrame.setVisible(true);
 		});
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(139, 139, 139));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
