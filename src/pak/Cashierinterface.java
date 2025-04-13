@@ -142,6 +142,8 @@ public class Cashierinterface extends JFrame {
 		panel.add(table_price);
 		
 		table = new JTable();
+		table.setColumnSelectionAllowed(false);
+		table.setCellSelectionEnabled(false);
 		table.setBounds(10, 106, 731, 423);
 		panel.add(table);
 		
