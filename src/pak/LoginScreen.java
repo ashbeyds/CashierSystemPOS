@@ -1,26 +1,20 @@
 package pak;
 
+import java.sql.*;
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import java.awt.Color;
-import javax.swing.JTextField;
-import javax.swing.JPasswordField;
-import javax.swing.JTextPane;
-import javax.swing.JButton;
-import java.awt.Font;
-import javax.swing.JTextArea;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-public class LoginScreen extends JFrame {
+public class LoginScreen {
 
-	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
-	private JTextField txtWa;
-	private JPasswordField passwordField;
+	private JFrame frame;
 
 	/**
 	 * Launch the application.
@@ -29,73 +23,66 @@ public class LoginScreen extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					LoginScreen frame = new LoginScreen();
-					frame.setVisible(true);
+					LoginScreen window = new LoginScreen();
+					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
 		});
 	}
-
+	Connection connection=null;
+	private JTextField LoginUserinput;
+	private JPasswordField UserPasswordInput;
 	/**
-	 * Create the frame.
+	 * Create the application.
 	 */
 	public LoginScreen() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
-		contentPane = new JPanel();
-		contentPane.setBackground(Color.LIGHT_GRAY);
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		initialize();
+		 connection= ConnectiontoDATABASE.connect();
+	}
 
-		setContentPane(contentPane);
-		contentPane.setLayout(null);
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
 		
-		JPanel panel = new JPanel();
-		panel.setBackground(Color.WHITE);
-		panel.setBounds(125, 61, 281, 49);
-		contentPane.add(panel);
-		panel.setLayout(null);
-		
-		txtWa = new JTextField();
-		txtWa.setBounds(10, 11, 261, 27);
-		panel.add(txtWa);
-		txtWa.setColumns(10);
-		
-		JPanel panel_1 = new JPanel();
-		panel_1.setBackground(Color.WHITE);
-		panel_1.setBounds(125, 139, 281, 49);
-		contentPane.add(panel_1);
-		panel_1.setLayout(null);
-		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(10, 11, 261, 27);
-		panel_1.add(passwordField);
-		
-		JButton btnNewButton = new JButton("Login");
-		btnNewButton.setBounds(148, 212, 89, 23);
-		contentPane.add(btnNewButton);
-		
-		JButton btnNewButton_1 = new JButton("Clear");
-		btnNewButton_1.setBounds(283, 212, 89, 23);
-		contentPane.add(btnNewButton_1);
-		
-		JLabel lblNewLabel = new JLabel("LOGIN");
-		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 17));
+		JLabel lblNewLabel = new JLabel("Username:");
+		lblNewLabel.setFont(new Font("Franklin Gothic Medium Cond", Font.PLAIN, 15));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(94, 21, 209, 23);
-		contentPane.add(lblNewLabel);
-		
-		JLabel lblUsername = new JLabel("Username:");
-		lblUsername.setFont(new Font("Courier New", Font.PLAIN, 15));
-		lblUsername.setHorizontalAlignment(SwingConstants.CENTER);
-		lblUsername.setBounds(22, 62, 93, 48);
-		contentPane.add(lblUsername);
+		lblNewLabel.setBounds(22, 82, 133, 35);
+		frame.getContentPane().add(lblNewLabel);
 		
 		JLabel lblPassword = new JLabel("Password:");
 		lblPassword.setHorizontalAlignment(SwingConstants.CENTER);
-		lblPassword.setFont(new Font("Courier New", Font.PLAIN, 15));
-		lblPassword.setBounds(22, 139, 93, 48);
-		contentPane.add(lblPassword);
+		lblPassword.setFont(new Font("Franklin Gothic Medium Cond", Font.PLAIN, 15));
+		lblPassword.setBounds(22, 142, 133, 35);
+		frame.getContentPane().add(lblPassword);
+		
+		LoginUserinput = new JTextField();
+		LoginUserinput.setBounds(154, 90, 190, 20);
+		frame.getContentPane().add(LoginUserinput);
+		LoginUserinput.setColumns(10);
+		
+		UserPasswordInput = new JPasswordField();
+		UserPasswordInput.setBounds(154, 150, 190, 20);
+		frame.getContentPane().add(UserPasswordInput);
+		
+		JButton LoginBUTTON = new JButton("Login");
+		LoginBUTTON.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		LoginBUTTON.setBounds(81, 200, 89, 23);
+		frame.getContentPane().add(LoginBUTTON);
+		
+		JButton ClearBUTTON = new JButton("Clear");
+		ClearBUTTON.setBounds(243, 200, 89, 23);
+		frame.getContentPane().add(ClearBUTTON);
 	}
+
 }

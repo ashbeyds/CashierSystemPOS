@@ -1,19 +1,21 @@
 package pak;
-import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
+import javax.swing.*;
+import java.sql.*;
 
 public class ConnectiontoDATABASE {
+	Connection conn = null;
 	public static Connection connect() {
-		Connection con = null;
+		
 		try {
 			Class.forName("org.sqlite.JDBC");
-			con = DriverManager.getConnection("jdbc:sqlite:databaselogin.db"); // Copy Qualified name or just copy file location
-			System.out.println("Connected");
-		} catch (ClassNotFoundException | SQLException e) {
+			 Connection conn = DriverManager.getConnection("jdbc:sqlite:databaselogin.db"); // Copy Qualified name or just copy file location
+			 JOptionPane.showMessageDialog(null, "Connection Done");
+			return conn;
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			System.out.println(e+"");
+			JOptionPane.showMessageDialog(null, e);
+			return null;
 		}
-		return con;
 }
 }
