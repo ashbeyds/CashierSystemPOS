@@ -236,6 +236,8 @@ public class Cashierinterface extends JFrame {
 		panel.add(lblNewLabel_1_1_1_2_1_1);
 		
 		textField_1 = new JTextField();
+		textField_1.setFont(new Font("Monospaced", Font.BOLD, 16));
+		textField_1.setText("0.00");
 		textField_1.setEditable(false);
 		textField_1.setColumns(10);
 		textField_1.setBounds(128, 540, 613, 20);
