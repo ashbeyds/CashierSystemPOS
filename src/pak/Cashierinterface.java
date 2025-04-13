@@ -43,8 +43,8 @@ public class Cashierinterface extends JFrame {
 	private JTextField txtItemQuantity;
 	private JTextField txtItemPrice;
 	private JTextField txtAmount;
-	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField textFieldChange;
+	private JTextField textField_TotalPrice;
 
 	/**
 	 * Launch the application.
@@ -73,24 +73,26 @@ public class Cashierinterface extends JFrame {
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
-		JMenu mnNewMenu = new JMenu("Other");
-		menuBar.add(mnNewMenu);
+		JMenu NewMenuOther = new JMenu("Other");
+		menuBar.add(NewMenuOther);
 		
-		JMenuItem mntmNewMenuItem = new JMenuItem("Add Product");
-		mnNewMenu.add(mntmNewMenuItem);
+		JMenuItem MenuItemAddProd = new JMenuItem("Add Product");
+		NewMenuOther.add(MenuItemAddProd);
 		
-		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Store Income");
-		mnNewMenu.add(mntmNewMenuItem_1);
+		JMenuItem MenuItemStoreIncome = new JMenuItem("Store Income");
+		NewMenuOther.add(MenuItemStoreIncome);
 		
-		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Stock Monitoring");
-		mnNewMenu.add(mntmNewMenuItem_2);
+		JMenuItem MenuItemStockMonitor = new JMenuItem("Stock Monitoring");
+		NewMenuOther.add(MenuItemStockMonitor);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(139, 139, 139));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
 		
 		JPanel panel = new JPanel();
+		panel.setBackground(new Color(192, 192, 192));
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
@@ -147,17 +149,17 @@ public class Cashierinterface extends JFrame {
 		table.setBounds(10, 106, 731, 423);
 		panel.add(table);
 		
-		JButton btnNewButton = new JButton("Add");
-		btnNewButton.setBounds(751, 223, 89, 23);
-		panel.add(btnNewButton);
+		JButton AddButton = new JButton("Add");
+		AddButton.setBounds(751, 223, 89, 23);
+		panel.add(AddButton);
 		
-		JButton btnNewButton_1 = new JButton("Delete");
-		btnNewButton_1.setBounds(850, 223, 89, 23);
-		panel.add(btnNewButton_1);
+		JButton DeleteButton = new JButton("Delete");
+		DeleteButton.setBounds(850, 223, 89, 23);
+		panel.add(DeleteButton);
 		
-		JButton btnNewButton_2 = new JButton("Update");
-		btnNewButton_2.setBounds(949, 223, 89, 23);
-		panel.add(btnNewButton_2);
+		JButton UpdateButton = new JButton("Update");
+		UpdateButton.setBounds(949, 223, 89, 23);
+		panel.add(UpdateButton);
 		
 		txtItemCode = new JTextField();
 		txtItemCode.setText("Item code");
@@ -165,10 +167,10 @@ public class Cashierinterface extends JFrame {
 		panel.add(txtItemCode);
 		txtItemCode.setColumns(10);
 		
-		JLabel lblNewLabel_1 = new JLabel("Code");
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblNewLabel_1.setBounds(753, 106, 54, 22);
-		panel.add(lblNewLabel_1);
+		JLabel lblNewLabel_Code = new JLabel("Code");
+		lblNewLabel_Code.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblNewLabel_Code.setBounds(753, 106, 54, 22);
+		panel.add(lblNewLabel_Code);
 		
 		txtItemName = new JTextField();
 		txtItemName.setText("Item name");
@@ -176,10 +178,10 @@ public class Cashierinterface extends JFrame {
 		txtItemName.setBounds(938, 130, 100, 20);
 		panel.add(txtItemName);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("Name");
-		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblNewLabel_1_1.setBounds(940, 106, 67, 22);
-		panel.add(lblNewLabel_1_1);
+		JLabel lblNewLabel_Name = new JLabel("Name");
+		lblNewLabel_Name.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblNewLabel_Name.setBounds(940, 106, 67, 22);
+		panel.add(lblNewLabel_Name);
 		
 		txtItemQuantity = new JTextField();
 		txtItemQuantity.setText("Item quantity");
@@ -187,15 +189,15 @@ public class Cashierinterface extends JFrame {
 		txtItemQuantity.setBounds(751, 185, 100, 20);
 		panel.add(txtItemQuantity);
 		
-		JLabel lblNewLabel_1_1_1 = new JLabel("Quantity");
-		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblNewLabel_1_1_1.setBounds(753, 161, 89, 22);
-		panel.add(lblNewLabel_1_1_1);
+		JLabel lblNewLabel_Quantity = new JLabel("Quantity");
+		lblNewLabel_Quantity.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblNewLabel_Quantity.setBounds(753, 161, 89, 22);
+		panel.add(lblNewLabel_Quantity);
 		
-		JLabel lblNewLabel_1_1_1_1 = new JLabel("Price");
-		lblNewLabel_1_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblNewLabel_1_1_1_1.setBounds(940, 161, 89, 22);
-		panel.add(lblNewLabel_1_1_1_1);
+		JLabel lblNewLabel_Price = new JLabel("Price");
+		lblNewLabel_Price.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblNewLabel_Price.setBounds(940, 161, 89, 22);
+		panel.add(lblNewLabel_Price);
 		
 		txtItemPrice = new JTextField();
 		txtItemPrice.setText("Item price");
@@ -203,10 +205,10 @@ public class Cashierinterface extends JFrame {
 		txtItemPrice.setBounds(938, 185, 100, 20);
 		panel.add(txtItemPrice);
 		
-		JLabel lblNewLabel_1_1_1_2 = new JLabel("Money Recieved");
-		lblNewLabel_1_1_1_2.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblNewLabel_1_1_1_2.setBounds(751, 276, 166, 22);
-		panel.add(lblNewLabel_1_1_1_2);
+		JLabel lblNewLabel_MoneyRecieved = new JLabel("Money Recieved");
+		lblNewLabel_MoneyRecieved.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblNewLabel_MoneyRecieved.setBounds(751, 276, 166, 22);
+		panel.add(lblNewLabel_MoneyRecieved);
 		
 		txtAmount = new JTextField();
 		txtAmount.setText("Amount");
@@ -214,37 +216,37 @@ public class Cashierinterface extends JFrame {
 		txtAmount.setBounds(751, 309, 166, 20);
 		panel.add(txtAmount);
 		
-		JLabel lblNewLabel_1_1_1_2_1 = new JLabel("Change");
-		lblNewLabel_1_1_1_2_1.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblNewLabel_1_1_1_2_1.setBounds(751, 340, 166, 22);
-		panel.add(lblNewLabel_1_1_1_2_1);
+		JLabel lblNewLabel_Change = new JLabel("Change");
+		lblNewLabel_Change.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblNewLabel_Change.setBounds(751, 340, 166, 22);
+		panel.add(lblNewLabel_Change);
 		
-		textField = new JTextField();
-		textField.setEditable(false);
-		textField.setBounds(751, 373, 166, 20);
-		panel.add(textField);
-		textField.setColumns(10);
+		textFieldChange = new JTextField();
+		textFieldChange.setEditable(false);
+		textFieldChange.setBounds(751, 373, 166, 20);
+		panel.add(textFieldChange);
+		textFieldChange.setColumns(10);
 		
-		JButton btnNewButton_3 = new JButton("Pay Balance");
-		btnNewButton_3.setBounds(751, 418, 100, 23);
-		panel.add(btnNewButton_3);
+		JButton btnNewButton_PayBal = new JButton("Pay Balance");
+		btnNewButton_PayBal.setBounds(751, 418, 100, 23);
+		panel.add(btnNewButton_PayBal);
 		
-		JButton btnNewButton_4 = new JButton("Print Receipt");
-		btnNewButton_4.setBounds(938, 418, 100, 23);
-		panel.add(btnNewButton_4);
+		JButton btnNewButton_PrintReceipt = new JButton("Print Receipt");
+		btnNewButton_PrintReceipt.setBounds(938, 418, 100, 23);
+		panel.add(btnNewButton_PrintReceipt);
 		
-		JLabel lblNewLabel_1_1_1_2_1_1 = new JLabel("Total:");
-		lblNewLabel_1_1_1_2_1_1.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblNewLabel_1_1_1_2_1_1.setBounds(10, 536, 166, 22);
-		panel.add(lblNewLabel_1_1_1_2_1_1);
+		JLabel lblNewLabel_TotalPrice = new JLabel("Total:");
+		lblNewLabel_TotalPrice.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblNewLabel_TotalPrice.setBounds(10, 536, 166, 22);
+		panel.add(lblNewLabel_TotalPrice);
 		
-		textField_1 = new JTextField();
-		textField_1.setFont(new Font("Monospaced", Font.BOLD, 16));
-		textField_1.setText("0.00");
-		textField_1.setEditable(false);
-		textField_1.setColumns(10);
-		textField_1.setBounds(128, 540, 613, 20);
-		panel.add(textField_1);
+		textField_TotalPrice = new JTextField();
+		textField_TotalPrice.setFont(new Font("Monospaced", Font.BOLD, 16));
+		textField_TotalPrice.setText("0.00");
+		textField_TotalPrice.setEditable(false);
+		textField_TotalPrice.setColumns(10);
+		textField_TotalPrice.setBounds(130, 536, 613, 24);
+		panel.add(textField_TotalPrice);
 		//panel.setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{lblNewLabel, label_code, label_name, label_qty, label_price, table_code, table_name, table_qty, table_price, table, panel_1, btnNewButton, btnNewButton_1, btnNewButton_2, txtItemCode, lblNewLabel_1, txtItemName, lblNewLabel_1_1, txtItemQuantity, lblNewLabel_1_1_1, lblNewLabel_1_1_1_1, txtItemPrice, lblNewLabel_1_1_1_2, txtAmount, lblNewLabel_1_1_1_2_1, textField, btnNewButton_3, btnNewButton_4, lblNewLabel_1_1_1_2_1_1, textField_1}));
 		
 		
