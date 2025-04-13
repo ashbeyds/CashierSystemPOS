@@ -23,6 +23,11 @@ import javax.swing.JButton;
 import org.eclipse.wb.swing.FocusTraversalOnArray;
 import java.awt.Component;
 import javax.swing.JFormattedTextField;
+import javax.swing.JComboBox;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+import javax.swing.SwingConstants;
 
 public class Cashierinterface extends JFrame {
 
@@ -39,6 +44,7 @@ public class Cashierinterface extends JFrame {
 	private JTextField txtItemPrice;
 	private JTextField txtAmount;
 	private JTextField textField;
+	private JTextField textField_1;
 
 	/**
 	 * Launch the application.
@@ -62,6 +68,21 @@ public class Cashierinterface extends JFrame {
 	public Cashierinterface() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1080, 640);
+		
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+		
+		JMenu mnNewMenu = new JMenu("Other");
+		menuBar.add(mnNewMenu);
+		
+		JMenuItem mntmNewMenuItem = new JMenuItem("Add Product");
+		mnNewMenu.add(mntmNewMenuItem);
+		
+		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Store Income");
+		mnNewMenu.add(mntmNewMenuItem_1);
+		
+		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Stock Monitoring");
+		mnNewMenu.add(mntmNewMenuItem_2);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -208,7 +229,18 @@ public class Cashierinterface extends JFrame {
 		JButton btnNewButton_4 = new JButton("Print Receipt");
 		btnNewButton_4.setBounds(938, 418, 100, 23);
 		panel.add(btnNewButton_4);
-		panel.setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{lblNewLabel, label_code, label_name, label_qty, label_price, table_code, table_name, table_qty, table_price, table, panel_1, btnNewButton, btnNewButton_1, btnNewButton_2, txtItemCode, lblNewLabel_1, txtItemName, lblNewLabel_1_1, txtItemQuantity, lblNewLabel_1_1_1, lblNewLabel_1_1_1_1, txtItemPrice, lblNewLabel_1_1_1_2, txtAmount, lblNewLabel_1_1_1_2_1, textField, btnNewButton_3, btnNewButton_4}));
+		
+		JLabel lblNewLabel_1_1_1_2_1_1 = new JLabel("Total:");
+		lblNewLabel_1_1_1_2_1_1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblNewLabel_1_1_1_2_1_1.setBounds(10, 536, 166, 22);
+		panel.add(lblNewLabel_1_1_1_2_1_1);
+		
+		textField_1 = new JTextField();
+		textField_1.setEditable(false);
+		textField_1.setColumns(10);
+		textField_1.setBounds(128, 540, 613, 20);
+		panel.add(textField_1);
+		panel.setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{lblNewLabel, label_code, label_name, label_qty, label_price, table_code, table_name, table_qty, table_price, table, panel_1, btnNewButton, btnNewButton_1, btnNewButton_2, txtItemCode, lblNewLabel_1, txtItemName, lblNewLabel_1_1, txtItemQuantity, lblNewLabel_1_1_1, lblNewLabel_1_1_1_1, txtItemPrice, lblNewLabel_1_1_1_2, txtAmount, lblNewLabel_1_1_1_2_1, textField, btnNewButton_3, btnNewButton_4, lblNewLabel_1_1_1_2_1_1, textField_1}));
 		
 		
 	}
