@@ -22,6 +22,7 @@ import javax.swing.JTable;
 import javax.swing.JButton;
 import org.eclipse.wb.swing.FocusTraversalOnArray;
 import java.awt.Component;
+import javax.swing.JFormattedTextField;
 
 public class Cashierinterface extends JFrame {
 
@@ -32,6 +33,11 @@ public class Cashierinterface extends JFrame {
 	private JTable table_qty;
 	private JTable table_price;
 	private JTable table;
+	private JTextField txtItemCode;
+	private JTextField txtItemName;
+	private JTextField txtItemQuantity;
+	private JTextField txtItemPrice;
+	private JTextField txtAmount;
 	private JTextField textField;
 
 	/**
@@ -118,22 +124,87 @@ public class Cashierinterface extends JFrame {
 		panel.add(table);
 		
 		JButton btnNewButton = new JButton("Add");
-		btnNewButton.setBounds(751, 506, 89, 23);
+		btnNewButton.setBounds(751, 223, 89, 23);
 		panel.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Delete");
-		btnNewButton_1.setBounds(850, 506, 89, 23);
+		btnNewButton_1.setBounds(850, 223, 89, 23);
 		panel.add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("Update");
-		btnNewButton_2.setBounds(949, 506, 89, 23);
+		btnNewButton_2.setBounds(949, 223, 89, 23);
 		panel.add(btnNewButton_2);
 		
+		txtItemCode = new JTextField();
+		txtItemCode.setText("Item code");
+		txtItemCode.setBounds(751, 130, 100, 20);
+		panel.add(txtItemCode);
+		txtItemCode.setColumns(10);
+		
+		JLabel lblNewLabel_1 = new JLabel("Code");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblNewLabel_1.setBounds(753, 106, 54, 22);
+		panel.add(lblNewLabel_1);
+		
+		txtItemName = new JTextField();
+		txtItemName.setText("Item name");
+		txtItemName.setColumns(10);
+		txtItemName.setBounds(938, 130, 100, 20);
+		panel.add(txtItemName);
+		
+		JLabel lblNewLabel_1_1 = new JLabel("Name");
+		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblNewLabel_1_1.setBounds(940, 106, 67, 22);
+		panel.add(lblNewLabel_1_1);
+		
+		txtItemQuantity = new JTextField();
+		txtItemQuantity.setText("Item quantity");
+		txtItemQuantity.setColumns(10);
+		txtItemQuantity.setBounds(751, 185, 100, 20);
+		panel.add(txtItemQuantity);
+		
+		JLabel lblNewLabel_1_1_1 = new JLabel("Quantity");
+		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblNewLabel_1_1_1.setBounds(753, 161, 89, 22);
+		panel.add(lblNewLabel_1_1_1);
+		
+		JLabel lblNewLabel_1_1_1_1 = new JLabel("Price");
+		lblNewLabel_1_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblNewLabel_1_1_1_1.setBounds(940, 161, 89, 22);
+		panel.add(lblNewLabel_1_1_1_1);
+		
+		txtItemPrice = new JTextField();
+		txtItemPrice.setText("Item price");
+		txtItemPrice.setColumns(10);
+		txtItemPrice.setBounds(938, 185, 100, 20);
+		panel.add(txtItemPrice);
+		
+		JLabel lblNewLabel_1_1_1_2 = new JLabel("Money Recieved");
+		lblNewLabel_1_1_1_2.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblNewLabel_1_1_1_2.setBounds(751, 276, 166, 22);
+		panel.add(lblNewLabel_1_1_1_2);
+		
+		txtAmount = new JTextField();
+		txtAmount.setText("Amount");
+		txtAmount.setColumns(10);
+		txtAmount.setBounds(751, 309, 166, 20);
+		panel.add(txtAmount);
+		
+		JLabel lblNewLabel_1_1_1_2_1 = new JLabel("Change");
+		lblNewLabel_1_1_1_2_1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblNewLabel_1_1_1_2_1.setBounds(751, 340, 166, 22);
+		panel.add(lblNewLabel_1_1_1_2_1);
+		
 		textField = new JTextField();
-		textField.setBounds(751, 130, 100, 20);
+		textField.setEditable(false);
+		textField.setBounds(751, 373, 166, 20);
 		panel.add(textField);
 		textField.setColumns(10);
-		panel.setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{lblNewLabel, label_code, label_name, label_qty, label_price, table_code, table_name, table_qty, table_price, table, panel_1, btnNewButton, btnNewButton_1, btnNewButton_2, textField}));
+		
+		JButton btnNewButton_3 = new JButton("Pay Balance");
+		btnNewButton_3.setBounds(751, 418, 100, 23);
+		panel.add(btnNewButton_3);
+		panel.setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{lblNewLabel, label_code, label_name, label_qty, label_price, table_code, table_name, table_qty, table_price, table, panel_1, btnNewButton, btnNewButton_1, btnNewButton_2, txtItemCode, lblNewLabel_1, txtItemName, lblNewLabel_1_1, txtItemQuantity, lblNewLabel_1_1_1, lblNewLabel_1_1_1_1, txtItemPrice, lblNewLabel_1_1_1_2, txtAmount, lblNewLabel_1_1_1_2_1, textField, btnNewButton_3}));
 		
 		
 	}
