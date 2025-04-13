@@ -20,7 +20,7 @@ import java.awt.Label;
 import javax.swing.JList;
 import javax.swing.JTable;
 import javax.swing.JButton;
-import org.eclipse.wb.swing.FocusTraversalOnArray;
+//import org.eclipse.wb.swing.FocusTraversalOnArray;
 import java.awt.Component;
 import javax.swing.JFormattedTextField;
 import javax.swing.JComboBox;
@@ -66,6 +66,7 @@ public class Cashierinterface extends JFrame {
 	 * Create the frame.
 	 */
 	public Cashierinterface() {
+		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1080, 640);
 		
@@ -242,7 +243,7 @@ public class Cashierinterface extends JFrame {
 		textField_1.setColumns(10);
 		textField_1.setBounds(128, 540, 613, 20);
 		panel.add(textField_1);
-		panel.setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{lblNewLabel, label_code, label_name, label_qty, label_price, table_code, table_name, table_qty, table_price, table, panel_1, btnNewButton, btnNewButton_1, btnNewButton_2, txtItemCode, lblNewLabel_1, txtItemName, lblNewLabel_1_1, txtItemQuantity, lblNewLabel_1_1_1, lblNewLabel_1_1_1_1, txtItemPrice, lblNewLabel_1_1_1_2, txtAmount, lblNewLabel_1_1_1_2_1, textField, btnNewButton_3, btnNewButton_4, lblNewLabel_1_1_1_2_1_1, textField_1}));
+		//panel.setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{lblNewLabel, label_code, label_name, label_qty, label_price, table_code, table_name, table_qty, table_price, table, panel_1, btnNewButton, btnNewButton_1, btnNewButton_2, txtItemCode, lblNewLabel_1, txtItemName, lblNewLabel_1_1, txtItemQuantity, lblNewLabel_1_1_1, lblNewLabel_1_1_1_1, txtItemPrice, lblNewLabel_1_1_1_2, txtAmount, lblNewLabel_1_1_1_2_1, textField, btnNewButton_3, btnNewButton_4, lblNewLabel_1_1_1_2_1_1, textField_1}));
 		
 		
 	}
