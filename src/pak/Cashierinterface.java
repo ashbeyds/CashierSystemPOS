@@ -28,16 +28,13 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.SwingConstants;
+import javax.swing.JScrollPane;
+import javax.swing.JTree;
 
 public class Cashierinterface extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JTable table_code;
-	private JTable table_name;
-	private JTable table_qty;
-	private JTable table_price;
-	private JTable table;
 	private JTextField txtItemCode;
 	private JTextField txtItemName;
 	private JTextField txtItemQuantity;
@@ -45,6 +42,7 @@ public class Cashierinterface extends JFrame {
 	private JTextField txtAmount;
 	private JTextField textFieldChange;
 	private JTextField textField_TotalPrice;
+	private JTable table;
 
 	/**
 	 * Launch the application.
@@ -79,14 +77,36 @@ public class Cashierinterface extends JFrame {
 		JMenuItem MenuItemAddProd = new JMenuItem("Add Product");
 		NewMenuOther.add(MenuItemAddProd);
 		
+		//opens adding of items/ deleting
+		
+		MenuItemAddProd.addActionListener(e -> {
+		    AddProductFrame addFrame = new AddProductFrame();
+		    addFrame.setVisible(true);
+		});
+
+		
 		JMenuItem MenuItemStoreIncome = new JMenuItem("Store Income");
 		NewMenuOther.add(MenuItemStoreIncome);
+		
+		//opens store income.
+		
+		MenuItemStoreIncome.addActionListener(e -> {
+		    StoreIncomeFrame incomeFrame = new StoreIncomeFrame();
+		    incomeFrame.setVisible(true);
+		});
 		
 		JMenuItem MenuItemStockMonitor = new JMenuItem("Stock Monitoring");
 		NewMenuOther.add(MenuItemStockMonitor);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(139, 139, 139));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		
+		//opens stock monitoring.
+		
+		MenuItemStockMonitor.addActionListener(e -> {
+		    StockMonitoringFrame stockFrame = new StockMonitoringFrame();
+		    stockFrame.setVisible(true);
+		});
 
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
@@ -95,6 +115,13 @@ public class Cashierinterface extends JFrame {
 		panel.setBackground(new Color(192, 192, 192));
 		contentPane.add(panel);
 		panel.setLayout(null);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(0, 106, 741, 419);
+		panel.add(scrollPane);
+		
+		table = new JTable();
+		scrollPane.setColumnHeaderView(table);
 		
 		JLabel lblNewLabel = new JLabel("EasySari");
 		lblNewLabel.setFont(new Font("Eras Bold ITC", Font.BOLD, 40));
@@ -126,28 +153,6 @@ public class Cashierinterface extends JFrame {
 		label_price.setFont(new Font("Dialog", Font.BOLD, 19));
 		label_price.setBounds(656, 78, 54, 22);
 		panel.add(label_price);
-		
-		table_code = new JTable();
-		table_code.setBounds(10, 129, 110, 20);
-		panel.add(table_code);
-		
-		table_name = new JTable();
-		table_name.setBounds(130, 130, 357, 20);
-		panel.add(table_name);
-		
-		table_qty = new JTable();
-		table_qty.setBounds(497, 130, 116, 20);
-		panel.add(table_qty);
-		
-		table_price = new JTable();
-		table_price.setBounds(623, 130, 118, 20);
-		panel.add(table_price);
-		
-		table = new JTable();
-		table.setColumnSelectionAllowed(false);
-		table.setCellSelectionEnabled(false);
-		table.setBounds(10, 106, 731, 423);
-		panel.add(table);
 		
 		JButton AddButton = new JButton("Add");
 		AddButton.setBounds(751, 223, 89, 23);
@@ -228,10 +233,12 @@ public class Cashierinterface extends JFrame {
 		textFieldChange.setColumns(10);
 		
 		JButton btnNewButton_PayBal = new JButton("Pay Balance");
+		btnNewButton_PayBal.setFont(new Font("Tahoma", Font.BOLD, 10));
 		btnNewButton_PayBal.setBounds(751, 418, 100, 23);
 		panel.add(btnNewButton_PayBal);
 		
 		JButton btnNewButton_PrintReceipt = new JButton("Print Receipt");
+		btnNewButton_PrintReceipt.setFont(new Font("Tahoma", Font.BOLD, 10));
 		btnNewButton_PrintReceipt.setBounds(938, 418, 100, 23);
 		panel.add(btnNewButton_PrintReceipt);
 		
@@ -245,8 +252,10 @@ public class Cashierinterface extends JFrame {
 		textField_TotalPrice.setText("0.00");
 		textField_TotalPrice.setEditable(false);
 		textField_TotalPrice.setColumns(10);
-		textField_TotalPrice.setBounds(130, 536, 613, 24);
+		textField_TotalPrice.setBounds(129, 536, 613, 24);
 		panel.add(textField_TotalPrice);
+		
+		
 		//panel.setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{lblNewLabel, label_code, label_name, label_qty, label_price, table_code, table_name, table_qty, table_price, table, panel_1, btnNewButton, btnNewButton_1, btnNewButton_2, txtItemCode, lblNewLabel_1, txtItemName, lblNewLabel_1_1, txtItemQuantity, lblNewLabel_1_1_1, lblNewLabel_1_1_1_1, txtItemPrice, lblNewLabel_1_1_1_2, txtAmount, lblNewLabel_1_1_1_2_1, textField, btnNewButton_3, btnNewButton_4, lblNewLabel_1_1_1_2_1_1, textField_1}));
 		
 		
