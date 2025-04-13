@@ -72,6 +72,7 @@ public class Cashierinterface extends JFrame {
 		setJMenuBar(menuBar);
 		
 		JMenuItem MenuItemAddProd = new JMenuItem("Add Product");
+		MenuItemAddProd.setBorderPainted(true);
 		menuBar.add(MenuItemAddProd);
 		
 		//opens adding of items/ deleting
@@ -143,7 +144,7 @@ public class Cashierinterface extends JFrame {
 		
 		Label label_qty = new Label("Quantity");
 		label_qty.setFont(new Font("Dialog", Font.BOLD, 19));
-		label_qty.setBounds(512, 78, 80, 22);
+		label_qty.setBounds(487, 78, 80, 22);
 		panel.add(label_qty);
 		
 		Label label_price = new Label("Price");
