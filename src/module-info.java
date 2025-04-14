@@ -12,6 +12,9 @@ module POSSystem {
     requires java.logging;
     requires org.xerial.sqlitejdbc;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
