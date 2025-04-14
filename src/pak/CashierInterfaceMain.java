@@ -68,7 +68,7 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Code", "Name", "Quantity", "Price"
             }
         ));
         TableScrollpane.setViewportView(TableContent);
