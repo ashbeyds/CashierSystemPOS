@@ -27,31 +27,38 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
     private void initComponents() {
 
         MainPanel = new javax.swing.JPanel();
-        jLabelCode = new javax.swing.JLabel();
         jLabelName = new javax.swing.JLabel();
-        jTextArea1 = new javax.swing.JTextArea();
+        jLabelCode = new javax.swing.JLabel();
+        jTextAreaCode = new javax.swing.JTextArea();
+        jTextAreaName = new javax.swing.JTextArea();
         jPanel2 = new javax.swing.JPanel();
         EasySari = new javax.swing.JLabel();
         TableScrollpane = new javax.swing.JScrollPane();
         TableContent = new javax.swing.JTable();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextAreaName1 = new javax.swing.JTextArea();
+        jLabelName1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         MainPanel.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabelCode.setBackground(new java.awt.Color(0, 0, 0));
-        jLabelCode.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabelCode.setText("Name");
-
         jLabelName.setBackground(new java.awt.Color(0, 0, 0));
         jLabelName.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabelName.setText("Code");
+        jLabelName.setText("Name");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setLineWrap(true);
-        jTextArea1.setRows(1);
-        jTextArea1.setAutoscrolls(false);
+        jLabelCode.setBackground(new java.awt.Color(0, 0, 0));
+        jLabelCode.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabelCode.setText("Code");
+
+        jTextAreaCode.setColumns(20);
+        jTextAreaCode.setLineWrap(true);
+        jTextAreaCode.setRows(1);
+        jTextAreaCode.setAutoscrolls(false);
+
+        jTextAreaName.setColumns(20);
+        jTextAreaName.setLineWrap(true);
+        jTextAreaName.setRows(1);
+        jTextAreaName.setAutoscrolls(false);
 
         jPanel2.setBackground(new java.awt.Color(255, 102, 102));
 
@@ -90,6 +97,15 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
         ));
         TableScrollpane.setViewportView(TableContent);
 
+        jTextAreaName1.setColumns(20);
+        jTextAreaName1.setLineWrap(true);
+        jTextAreaName1.setRows(1);
+        jTextAreaName1.setAutoscrolls(false);
+
+        jLabelName1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabelName1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabelName1.setText("Quantity");
+
         javax.swing.GroupLayout MainPanelLayout = new javax.swing.GroupLayout(MainPanel);
         MainPanel.setLayout(MainPanelLayout);
         MainPanelLayout.setHorizontalGroup(
@@ -98,36 +114,38 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
             .addGroup(MainPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(TableScrollpane, javax.swing.GroupLayout.PREFERRED_SIZE, 740, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextAreaCode)
+                    .addComponent(jTextAreaName)
+                    .addComponent(jTextAreaName1)
                     .addGroup(MainPanelLayout.createSequentialGroup()
-                        .addComponent(jLabelName)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabelCode)
-                        .addGap(21, 21, 21))
-                    .addGroup(MainPanelLayout.createSequentialGroup()
-                        .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(148, Short.MAX_VALUE))))
+                        .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelCode)
+                            .addComponent(jLabelName)
+                            .addComponent(jLabelName1))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         MainPanelLayout.setVerticalGroup(
             MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MainPanelLayout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(TableScrollpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(MainPanelLayout.createSequentialGroup()
+                        .addComponent(jLabelCode)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextAreaCode, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(TableScrollpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(MainPanelLayout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelName)
-                            .addComponent(jLabelCode))
+                        .addComponent(jLabelName)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextAreaName, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(jLabelName1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextAreaName1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(97, Short.MAX_VALUE))
         );
 
@@ -187,8 +205,10 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
     private javax.swing.JScrollPane TableScrollpane;
     private javax.swing.JLabel jLabelCode;
     private javax.swing.JLabel jLabelName;
+    private javax.swing.JLabel jLabelName1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextAreaCode;
+    private javax.swing.JTextArea jTextAreaName;
+    private javax.swing.JTextArea jTextAreaName1;
     // End of variables declaration//GEN-END:variables
 }
