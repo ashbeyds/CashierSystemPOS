@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package pak;
-import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author PC
@@ -32,7 +32,6 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
         EasySari = new javax.swing.JLabel();
         TableScrollpane = new javax.swing.JScrollPane();
         Plist = new javax.swing.JTable();
-<<<<<<< Updated upstream
         jLabelQuantity = new javax.swing.JLabel();
         jLabelProductList = new javax.swing.JLabel();
         jTextFieldProductCode = new javax.swing.JTextField();
@@ -52,28 +51,6 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
         jMenuBarMain = new javax.swing.JMenuBar();
         jMenuOther = new javax.swing.JMenu();
         jMenuStockMonitor = new javax.swing.JMenuItem();
-=======
-        jLabelName1 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jLabelName2 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
-        jLabelName3 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jLabelName4 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
->>>>>>> Stashed changes
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -111,7 +88,61 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
         Plist.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         Plist.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
                 "Product Code", "Product Description", "Quantity", "Price"
@@ -126,32 +157,19 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
         jLabelProductList.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
         jLabelProductList.setText("Product List");
 
-<<<<<<< Updated upstream
         jTextFieldProductCode.addActionListener(new java.awt.event.ActionListener() {
-=======
-        jTextField3.setName("pc"); // NOI18N
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
->>>>>>> Stashed changes
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldProductCodeActionPerformed(evt);
             }
         });
 
-<<<<<<< Updated upstream
         jTextFieldQuantity.addActionListener(new java.awt.event.ActionListener() {
-=======
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
->>>>>>> Stashed changes
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldQuantityActionPerformed(evt);
             }
         });
 
-<<<<<<< Updated upstream
         jTextFieldPrice.addActionListener(new java.awt.event.ActionListener() {
-=======
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
->>>>>>> Stashed changes
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldPriceActionPerformed(evt);
             }
@@ -185,11 +203,7 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
         jLabelAmountReceived.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabelAmountReceived.setText("Amount Received");
 
-<<<<<<< Updated upstream
         jTextFieldAmountRecieved.addActionListener(new java.awt.event.ActionListener() {
-=======
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
->>>>>>> Stashed changes
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldAmountRecievedActionPerformed(evt);
             }
@@ -199,13 +213,9 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
         jLabelChange.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabelChange.setText("Change");
 
-<<<<<<< Updated upstream
         jTextFieldChange.setEditable(false);
         jTextFieldChange.setAutoscrolls(false);
         jTextFieldChange.addActionListener(new java.awt.event.ActionListener() {
-=======
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
->>>>>>> Stashed changes
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldChangeActionPerformed(evt);
             }
@@ -223,18 +233,6 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
         jLabelPurchase.setText("Purchase");
 
         jButtonTotal.setText("Total");
-
-        jButton2.setText("Add");
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
-            }
-        });
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout MainPanelLayout = new javax.swing.GroupLayout(MainPanel);
         MainPanel.setLayout(MainPanelLayout);
@@ -278,16 +276,9 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
                                     .addComponent(jButtonEndTransact, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
                                     .addGroup(MainPanelLayout.createSequentialGroup()
                                         .addGap(50, 50, 50)
-<<<<<<< Updated upstream
                                         .addComponent(jButtonTotal))))
                             .addComponent(jTextFieldChange, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelNamePrice)))
-=======
-                                        .addComponent(jButton1))))
-                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelName2)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
->>>>>>> Stashed changes
                     .addGroup(MainPanelLayout.createSequentialGroup()
                         .addGap(298, 298, 298)
                         .addComponent(jLabelProductList, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -301,18 +292,14 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
                 .addComponent(jPanelHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-<<<<<<< Updated upstream
                     .addComponent(jLabelProductList, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelPurchase, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-=======
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(1, 1, 1)
-                .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(TableScrollpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
->>>>>>> Stashed changes
                     .addGroup(MainPanelLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(TableScrollpane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(MainPanelLayout.createSequentialGroup()
+                        .addGap(63, 63, 63)
                         .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabelQuantity)
                             .addComponent(jLabelProductCode))
@@ -333,13 +320,7 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jLabelChange)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-<<<<<<< Updated upstream
                         .addComponent(jTextFieldChange, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
-=======
-                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
->>>>>>> Stashed changes
                 .addGap(13, 13, 13)
                 .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabelTotalAmount, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
@@ -423,29 +404,6 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
         // this.setVisible(false);
     }//GEN-LAST:event_jMenuStockMonitorActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        String ProductCode = jTextField3.getText().trim();
-        String Quantity = jTextField4.getText().trim();
-        String Price = jTextField5.getText().trim();
-
-        // Get existing table model]
-        DefaultTableModel model = (DefaultTableModel) Plist.getModel();
-
-        // Add new row
-        model.addRow(new Object[]{ProductCode, "" , Quantity, Price});
-
-        // Clear input fields (optional)
-        jTextField3.setText("");
-        jTextField4.setText("");
-        jTextField5.setText("");
-
-        
-    }//GEN-LAST:event_jButton2MouseClicked
-
     /**
      * @param args the command line arguments
      */
@@ -486,7 +444,6 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
     private javax.swing.JPanel MainPanel;
     private javax.swing.JTable Plist;
     private javax.swing.JScrollPane TableScrollpane;
-<<<<<<< Updated upstream
     private javax.swing.JButton jButtonEndTransact;
     private javax.swing.JButton jButtonPrintReceipt;
     private javax.swing.JButton jButtonTotal;
@@ -508,29 +465,5 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldProductCode;
     private javax.swing.JTextField jTextFieldQuantity;
     private javax.swing.JTextField jTextFieldTotalAmount;
-=======
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabelName;
-    private javax.swing.JLabel jLabelName1;
-    private javax.swing.JLabel jLabelName2;
-    private javax.swing.JLabel jLabelName3;
-    private javax.swing.JLabel jLabelName4;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
->>>>>>> Stashed changes
     // End of variables declaration//GEN-END:variables
 }

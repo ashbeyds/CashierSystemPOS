@@ -38,13 +38,14 @@ public class CashierAddandStockMonitoring extends javax.swing.JFrame {
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
         jLabelName2 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        jButtonAddProduct = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabelName5 = new javax.swing.JLabel();
         jTextField8 = new javax.swing.JTextField();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        jButtonMainPage = new javax.swing.JButton();
+        jMenuBarMain = new javax.swing.JMenuBar();
+        jMenuOther = new javax.swing.JMenu();
+        jMenuStockMonitor = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -151,24 +152,18 @@ public class CashierAddandStockMonitoring extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
         jLabel1.setText("Product Stock");
 
-        jTextField3.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField3.setOpaque(false);
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField3ActionPerformed(evt);
             }
         });
 
-        jTextField4.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField4.setOpaque(false);
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField4ActionPerformed(evt);
             }
         });
 
-        jTextField5.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField5.setOpaque(false);
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField5ActionPerformed(evt);
@@ -179,12 +174,12 @@ public class CashierAddandStockMonitoring extends javax.swing.JFrame {
         jLabelName2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabelName2.setText("Product Code");
 
-        jButton3.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jButton3.setText("Add Product");
-        jButton3.setToolTipText("");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jButtonAddProduct.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jButtonAddProduct.setText("Add Product");
+        jButtonAddProduct.setToolTipText("");
+        jButtonAddProduct.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jButtonAddProductActionPerformed(evt);
             }
         });
 
@@ -195,11 +190,18 @@ public class CashierAddandStockMonitoring extends javax.swing.JFrame {
         jLabelName5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabelName5.setText("Price (Per Piece)");
 
-        jTextField8.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField8.setOpaque(false);
         jTextField8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField8ActionPerformed(evt);
+            }
+        });
+
+        jButtonMainPage.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jButtonMainPage.setText("Main Page");
+        jButtonMainPage.setToolTipText("");
+        jButtonMainPage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMainPageActionPerformed(evt);
             }
         });
 
@@ -227,14 +229,15 @@ public class CashierAddandStockMonitoring extends javax.swing.JFrame {
                                 .addGroup(MainPanelLayout.createSequentialGroup()
                                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(76, 76, 76)))
-                            .addComponent(jLabelName2))
+                            .addComponent(jLabelName2)
+                            .addComponent(jButtonMainPage, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(6, 6, 6)
                         .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabelName5)
                             .addComponent(jLabelName1)
                             .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jButtonAddProduct, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(MainPanelLayout.createSequentialGroup()
                         .addGap(208, 208, 208)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -269,17 +272,26 @@ public class CashierAddandStockMonitoring extends javax.swing.JFrame {
                             .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButtonAddProduct, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonMainPage, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(82, Short.MAX_VALUE))
         );
 
-        jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
+        jMenuOther.setText("Other");
+        jMenuOther.setEnabled(false);
 
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
+        jMenuStockMonitor.setText("Stock Monitoring");
+        jMenuStockMonitor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuStockMonitorActionPerformed(evt);
+            }
+        });
+        jMenuOther.add(jMenuStockMonitor);
 
-        setJMenuBar(jMenuBar1);
+        jMenuBarMain.add(jMenuOther);
+
+        setJMenuBar(jMenuBarMain);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -310,13 +322,33 @@ public class CashierAddandStockMonitoring extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField3ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButtonAddProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddProductActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jButtonAddProductActionPerformed
 
     private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField8ActionPerformed
+
+    private void jMenuStockMonitorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuStockMonitorActionPerformed
+        // TODO add your handling code here:
+        CashierAddandStockMonitoring stockFrame = new CashierAddandStockMonitoring();
+        stockFrame.setVisible(true);
+
+        this.dispose();
+
+        // Optionally hide this frame:
+        // this.setVisible(false);
+    }//GEN-LAST:event_jMenuStockMonitorActionPerformed
+
+    private void jButtonMainPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMainPageActionPerformed
+        // TODO add your handling code here:
+        this.dispose();  // This will close the current window (CashierAddandStockMonitoring)
+
+        // Open the Main Page (CashierInterface)
+        CashierInterfaceMain mainPage = new CashierInterfaceMain();
+        mainPage.setVisible(true);
+    }//GEN-LAST:event_jButtonMainPageActionPerformed
 
     /**
      * @param args the command line arguments
@@ -359,16 +391,17 @@ public class CashierAddandStockMonitoring extends javax.swing.JFrame {
     private javax.swing.JPanel MainPanel;
     private javax.swing.JTable Plist;
     private javax.swing.JScrollPane TableScrollpane;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButtonAddProduct;
+    private javax.swing.JButton jButtonMainPage;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelName;
     private javax.swing.JLabel jLabelName1;
     private javax.swing.JLabel jLabelName2;
     private javax.swing.JLabel jLabelName5;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuBar jMenuBarMain;
+    private javax.swing.JMenu jMenuOther;
+    private javax.swing.JMenuItem jMenuStockMonitor;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
