@@ -29,14 +29,16 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
         MainPanel = new javax.swing.JPanel();
         jLabelName = new javax.swing.JLabel();
         jLabelCode = new javax.swing.JLabel();
+        jLabelQuantity = new javax.swing.JLabel();
+        jLabelPrice = new javax.swing.JLabel();
         jTextAreaCode = new javax.swing.JTextArea();
         jTextAreaName = new javax.swing.JTextArea();
+        jTextAreaName1 = new javax.swing.JTextArea();
+        jTextAreaPrice = new javax.swing.JTextArea();
         jPanel2 = new javax.swing.JPanel();
         EasySari = new javax.swing.JLabel();
         TableScrollpane = new javax.swing.JScrollPane();
         TableContent = new javax.swing.JTable();
-        jTextAreaName1 = new javax.swing.JTextArea();
-        jLabelName1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,6 +52,14 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
         jLabelCode.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabelCode.setText("Code");
 
+        jLabelQuantity.setBackground(new java.awt.Color(0, 0, 0));
+        jLabelQuantity.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabelQuantity.setText("Quantity");
+
+        jLabelPrice.setBackground(new java.awt.Color(0, 0, 0));
+        jLabelPrice.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabelPrice.setText("Price");
+
         jTextAreaCode.setColumns(20);
         jTextAreaCode.setLineWrap(true);
         jTextAreaCode.setRows(1);
@@ -59,6 +69,16 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
         jTextAreaName.setLineWrap(true);
         jTextAreaName.setRows(1);
         jTextAreaName.setAutoscrolls(false);
+
+        jTextAreaName1.setColumns(20);
+        jTextAreaName1.setLineWrap(true);
+        jTextAreaName1.setRows(1);
+        jTextAreaName1.setAutoscrolls(false);
+
+        jTextAreaPrice.setColumns(20);
+        jTextAreaPrice.setLineWrap(true);
+        jTextAreaPrice.setRows(1);
+        jTextAreaPrice.setAutoscrolls(false);
 
         jPanel2.setBackground(new java.awt.Color(255, 102, 102));
 
@@ -97,15 +117,6 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
         ));
         TableScrollpane.setViewportView(TableContent);
 
-        jTextAreaName1.setColumns(20);
-        jTextAreaName1.setLineWrap(true);
-        jTextAreaName1.setRows(1);
-        jTextAreaName1.setAutoscrolls(false);
-
-        jLabelName1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabelName1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabelName1.setText("Quantity");
-
         javax.swing.GroupLayout MainPanelLayout = new javax.swing.GroupLayout(MainPanel);
         MainPanel.setLayout(MainPanelLayout);
         MainPanelLayout.setHorizontalGroup(
@@ -119,11 +130,13 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
                     .addComponent(jTextAreaCode)
                     .addComponent(jTextAreaName)
                     .addComponent(jTextAreaName1)
+                    .addComponent(jTextAreaPrice)
                     .addGroup(MainPanelLayout.createSequentialGroup()
                         .addGroup(MainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabelCode)
                             .addComponent(jLabelName)
-                            .addComponent(jLabelName1))
+                            .addComponent(jLabelQuantity)
+                            .addComponent(jLabelPrice))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -138,14 +151,18 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
                         .addComponent(jLabelCode)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextAreaCode, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabelName)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextAreaName, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabelName1)
+                        .addComponent(jLabelQuantity)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextAreaName1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextAreaName1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelPrice)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextAreaPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(97, Short.MAX_VALUE))
         );
 
@@ -205,10 +222,12 @@ public class CashierInterfaceMain extends javax.swing.JFrame {
     private javax.swing.JScrollPane TableScrollpane;
     private javax.swing.JLabel jLabelCode;
     private javax.swing.JLabel jLabelName;
-    private javax.swing.JLabel jLabelName1;
+    private javax.swing.JLabel jLabelPrice;
+    private javax.swing.JLabel jLabelQuantity;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextArea jTextAreaCode;
     private javax.swing.JTextArea jTextAreaName;
     private javax.swing.JTextArea jTextAreaName1;
+    private javax.swing.JTextArea jTextAreaPrice;
     // End of variables declaration//GEN-END:variables
 }
