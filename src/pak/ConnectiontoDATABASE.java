@@ -10,7 +10,7 @@ public class ConnectiontoDATABASE {
 		try {
 			Class.forName("org.sqlite.JDBC");
 			 Connection conn = DriverManager.getConnection("jdbc:sqlite:databaselogin.db"); // Copy Qualified name or just copy file location
-			 JOptionPane.showMessageDialog(null, "");
+			 JOptionPane.showMessageDialog(null, "Connected BOI");
 			return conn;
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
