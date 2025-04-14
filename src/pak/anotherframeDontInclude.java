@@ -5,8 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import java.awt.Color;
 
-public class StockMonitoringFrame extends JFrame {
+public class AnotherframeDontInclude extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -18,7 +19,7 @@ public class StockMonitoringFrame extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					StockMonitoringFrame frame = new StockMonitoringFrame();
+					AnotherframeDontInclude frame = new AnotherframeDontInclude();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -30,13 +31,29 @@ public class StockMonitoringFrame extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public StockMonitoringFrame() {
+	public AnotherframeDontInclude() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(Color.BLACK);
+		panel.setBounds(54, 29, 88, 72);
+		contentPane.add(panel);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(Color.BLACK);
+		panel_1.setBounds(228, 107, 95, 111);
+		contentPane.add(panel_1);
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setBackground(Color.GRAY);
+		panel_2.setBounds(53, 154, 77, 64);
+		contentPane.add(panel_2);
+		System.out.print("tieiteizcxcxzcxzcxet");
 	}
-
 }
