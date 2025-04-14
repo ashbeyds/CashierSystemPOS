@@ -83,6 +83,11 @@ public class LoginScreen {
 		JButton ClearBUTTON = new JButton("Clear");
 		ClearBUTTON.setBounds(243, 200, 89, 23);
 		frame.getContentPane().add(ClearBUTTON);
+		
+		JLabel lblNewLabel_1 = new JLabel("Store Login");
+		lblNewLabel_1.setFont(new Font("Rockwell", Font.PLAIN, 15));
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setBounds(116, 25, 183, 45);
+		frame.getContentPane().add(lblNewLabel_1);
 	}
-
 }
