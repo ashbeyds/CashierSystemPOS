@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 
-public class AnotherframeDontInclude extends JFrame {
+public class anotherframe extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -19,7 +19,7 @@ public class AnotherframeDontInclude extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					AnotherframeDontInclude frame = new AnotherframeDontInclude();
+					anotherframe frame = new anotherframe();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -31,7 +31,7 @@ public class AnotherframeDontInclude extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public AnotherframeDontInclude() {
+	public anotherframe() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
