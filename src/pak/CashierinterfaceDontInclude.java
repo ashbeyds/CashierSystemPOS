@@ -30,6 +30,7 @@ import javax.swing.JMenuItem;
 import javax.swing.SwingConstants;
 import javax.swing.JScrollPane;
 import javax.swing.JTree;
+import javax.swing.table.DefaultTableModel;
 
 public class CashierinterfaceDontInclude extends JFrame {
 
@@ -115,11 +116,29 @@ public class CashierinterfaceDontInclude extends JFrame {
 		panel.setLayout(null);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(0, 106, 741, 419);
+		scrollPane.setBounds(0, 70, 741, 455);
 		panel.add(scrollPane);
 		
 		table = new JTable();
 		scrollPane.setColumnHeaderView(table);
+		// Define column names
+		String[] columnNames = {"Code", "Product Name", "Quantity","Price"};
+
+		// Sample data rows
+		Object[][] data = {
+		    {1, "Apple", 1 , 0.99},
+		    {2, "Banana", 1 , 0.59},
+		    {3, "Orange", 1 , 1.29}
+		};
+
+		// Create the table model
+		DefaultTableModel model = new DefaultTableModel(data, columnNames);
+
+		// Set the model to the table
+		table = new JTable(model);
+
+		// Set table into the scroll pane
+		scrollPane.setViewportView(table); // <- This sets the full table in the scroll pane
 		
 		JLabel lblNewLabel = new JLabel("EasySari");
 		lblNewLabel.setFont(new Font("Eras Bold ITC", Font.BOLD, 40));
@@ -131,26 +150,6 @@ public class CashierinterfaceDontInclude extends JFrame {
 		panel_1.setBackground(Color.decode("#ff5050"));
 		panel_1.setBounds(-97, 0, 1165, 72);
 		panel.add(panel_1);
-		
-		Label label_code = new Label("Code");
-		label_code.setFont(new Font("Dialog", Font.BOLD, 19));
-		label_code.setBounds(40, 78, 54, 22);
-		panel.add(label_code);
-		
-		Label label_name = new Label("Name");
-		label_name.setFont(new Font("Dialog", Font.BOLD, 19));
-		label_name.setBounds(278, 78, 54, 22);
-		panel.add(label_name);
-		
-		Label label_qty = new Label("Quantity");
-		label_qty.setFont(new Font("Dialog", Font.BOLD, 19));
-		label_qty.setBounds(487, 78, 80, 22);
-		panel.add(label_qty);
-		
-		Label label_price = new Label("Price");
-		label_price.setFont(new Font("Dialog", Font.BOLD, 19));
-		label_price.setBounds(656, 78, 54, 22);
-		panel.add(label_price);
 		
 		JButton AddButton = new JButton("Add");
 		AddButton.setBounds(751, 223, 89, 23);
